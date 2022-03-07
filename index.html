@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <Fieldset>
+            <legend>Formulário de sugestão</legend>
+            
+            <label for="name">Nome e Sobrenome: </label>
+            <input id="namet" type="text" name="name" ><br><br>
+            <label for="cargo">Cargo na empresa: </label>
+            <input id="listaa" list="lista-cargo" type="text" name="cargo">
+            <datalist id="lista-cargo">
+                <option value="Gerente">
+                <option value="Funcionário">
+                <option value="Vendedor">
+                <option value="Zelador">
+            </datalist><br><br>
+            <label for="email">Email: </label>
+            <input id="emaila" type="email" name="email"><br><br>
+            <label for="texto" >Sugestão: </label>
+            <input id="sug" type="text" name="texto"><br><br>
+            <input onclick="cleanAll()" type="submit" id="but" placeholder="Enviar">
+            
+        </Fieldset>
+        <script>
+            function cleanAll(){
+                document.getElementById('namet').value=''
+                document.getElementById('listaa').value=''
+                document.getElementById('emaila').value=''
+                document.getElementById('sug').value=''
+            }
+        </script>
+    </body>
+</html>
